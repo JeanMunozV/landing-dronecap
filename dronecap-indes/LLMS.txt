@@ -1,0 +1,81 @@
+# Contexto de Dronecap para LLMs
+
+> Fuente de contexto para redactar o reconstruir una landing de Dronecap. Idioma base: español. Información contrastada con el sitio público el 30 de agosto de 2026. No inventar precios, cobertura geográfica, certificaciones ni especificaciones técnicas no confirmadas.
+
+## Identidad y posicionamiento
+
+Dronecap es una empresa chilena de soluciones aéreas mediante RPA (aeronaves pilotadas a distancia / drones). Su propuesta combina tecnología, precisión y operación profesional para ayudar a industrias a obtener información, inspeccionar, vigilar, capacitar personal y optimizar procesos con seguridad.
+
+- Comunicar una marca técnica, confiable y cercana; tono comercial-profesional, claro y orientado a resultados.
+- Priorizar seguridad operacional, calidad, eficiencia, precisión y decisiones informadas.
+- Público principal: organizaciones y profesionales de construcción, minería, agricultura, urbanismo y seguridad; también personas que buscan formación para operar drones profesionalmente.
+- La misión pública es liderar la aplicación, uso e implementación de aeronaves no tripuladas en el desarrollo de la industria; la visión se enfoca en el monitoreo mediante drones.
+- `CERTICAL Ltda.` se ha indicado como razón social en el contexto del proyecto, pero no está confirmada por las páginas públicas revisadas: validar antes de exhibirla como dato legal.
+
+## Servicios que se pueden comunicar
+
+- Aerofotogrametría y levantamientos fotogramétricos: mapeo y captura de información aérea para proyectos industriales. Se puede hablar de precisión, eficiencia, cobertura de áreas y reducción de exposición del personal, sin prometer resultados numéricos salvo que se validen para cada proyecto.
+- Inspección aérea: revisión de estructuras y zonas de difícil acceso, incluidos ejemplos públicos como torres de energía y edificios.
+- Fumigación con dron: aplicación eficiente y precisa; no añadir cifras de reducción de pesticidas ni capacidades de carga sin respaldo específico.
+- Vigilancia aérea: vigilancia perimetral y apoyo al monitoreo en tiempo real.
+- Registro audiovisual: imágenes y videos aéreos para fines como publicidad y documentales.
+- Asesoría para la conformación de flotas de drones en la industria.
+- Asesoría para certificación AOC.
+
+Para aerofotogrametría, las industrias explícitamente mencionadas son construcción, minería, agricultura y urbanismo. Para vigilancia, usar un enfoque de apoyo y prevención; no asegurar detección o respuesta garantizada.
+
+## Academia y formación
+
+Dronecap ofrece formación para operar drones de manera segura y responsable, junto con una academia que reúne material de estudio y evaluaciones para operadores RPA. Cursos visibles en el sitio:
+
+- Operaciones nocturnas para actualizar credencial y habilitación de vuelos nocturnos — modalidad teórico-práctica; duración no publicada en el catálogo.
+- Drones pulverizadores y estrategias de aplicación — modalidad híbrida (teórico-práctica); duración no publicada en el catálogo.
+- Aerofotogrametría — 36 horas, teórico-práctico.
+- Aerovigilancia — 36 horas, teórico-práctico.
+- Curso básico de drones — 16 horas, teórico-práctico; figura como «próximamente».
+- Piloto profesional — 50 horas, teórico-práctico.
+- Fumigación con dron — 36 horas, teórico-práctico.
+
+Las fechas, disponibilidad, requisitos, precios y certificaciones de cada curso deben confirmarse antes de comunicarse.
+
+## Pruebas de confianza
+
+Estas credenciales pueden respaldar la landing, formuladas sin exageraciones:
+
+- AOC 1409; el sitio declara que fue la primera empresa en certificar la instrucción de vuelo ante DGAC en 2021.
+- Más de siete años de experiencia en servicios con drones y formación de pilotos.
+- Cursos con código SENCE (el sitio contiene una errata: «SENSE» en una mención).
+- Participación como proveedor del Estado mediante Mercado Público.
+- Alianzas estratégicas declaradas con Duoc UC, Universidad Santo Tomás y Autel Robotics.
+- Infraestructura para capacitaciones en Talcahuano y campo de vuelo cercano a Concepción.
+
+Evitar afirmar que estas credenciales aplican automáticamente a cada servicio o curso; consultar el alcance vigente cuando sea relevante.
+
+## Estructura y llamadas a la acción sugeridas
+
+Navegación principal: **Servicios**, **Cursos**, **Nosotros**, **Equipos**, **Noticias** y **Contacto**.
+
+CTAs prioritarios:
+
+1. **Cotizar** para servicios.
+2. **Solicitar asesoría** para flotas o certificación AOC.
+3. **Ver cursos** para formación.
+
+Una landing puede abrir con la idea «Soluciones aéreas que generan valor», seguir con servicios e industrias, diferenciales/credenciales, cursos y un bloque de contacto. Enfatizar beneficios verificables y adaptar la propuesta al desafío del cliente.
+
+## Datos de contacto públicos
+
+- Correo: `contacto@dronecap.cl`
+- Teléfono: `+56 9 4926 4903`
+- Horario: lunes a viernes, 09:00–21:00.
+- Dirección: **pendiente de validación**. El encabezado y la página de contacto publican «Colón 2945, Talcahuano, Región del Biobío», mientras el pie y la página «Por qué elegirnos» publican «Avenida Colón 2965, Talcahuano». No elegir ni mostrar una como definitiva hasta confirmarla.
+
+## Fuentes públicas consultadas
+
+- [Inicio y catálogo de servicios](https://www.dronecap.cl/)
+- [Servicio de aerofotogrametría](https://www.dronecap.cl/servicios/servicio-de-aerofotogrametria-con-drones-en-chile-1731335929/)
+- [Cursos](https://www.dronecap.cl/cursos/)
+- [Academia](https://www.dronecap.cl/academia/)
+- [Nosotros](https://www.dronecap.cl/nosotros/)
+- [Por qué elegirnos](https://www.dronecap.cl/por-que-elegirnos/)
+- [Contacto](https://www.dronecap.cl/contacto/)
