@@ -1,12 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 import heroImage from '../assets/dronecap/svc-06.webp';
+import flightImage from '../assets/dronecap/gal-16.webp';
+import agricultureImage from '../assets/dronecap/svc-07.webp';
 import analysisImage from '../assets/dronecap/aero-03.webp';
 import operationsImage from '../assets/dronecap/gal-01.webp';
 import thermalImage from '../assets/dronecap/svc-04.webp';
 import landscapeImage from '../assets/dronecap/eq-hero-01.webp';
-import logo from '../assets/dronecap-logo.svg';
-import whatsappIcon from '../assets/whatsapp.svg';
+import surveyImage from '../assets/dronecap/svc-01.webp';
+import siteMonitoringImage from '../assets/dronecap/gal-04.webp';
+import miningImage from '../assets/dronecap/news-mining.webp';
+import fireImage from '../assets/dronecap/news-fire.webp';
+import enterpriseDroneImage from '../assets/dronecap/eq-04.webp';
+import powerlinesImage from '../assets/dronecap/gal-11.webp';
+import logo from '../assets/dronecap-logo.png';
+import whatsappIcon from '../assets/WhatsApp_icon.png';
 
 const whatsappUrl = 'https://wa.me/56949264903?text=Hola%20Dronecap%2C%20quisiera%20conversar%20sobre%20un%20desaf%C3%ADo%20de%20innovaci%C3%B3n%20y%20desarrollo%20con%20drones.';
 const capabilities = [
@@ -15,42 +23,150 @@ const capabilities = [
   ['03', 'Pruebas que acercan la escala', 'Diseñamos pilotos de trabajo para validar una aplicación antes de integrarla a una operación de mayor alcance.'],
 ];
 const sectors = ['Minería', 'Construcción', 'Agricultura', 'Seguridad'];
+const heroSlides = [
+  [heroImage, 'Operador de Dronecap realizando una prueba aérea en terreno'],
+  [flightImage, 'Dron en vuelo durante una operación aérea'],
+  [agricultureImage, 'Dron realizando una aplicación aérea en un campo'],
+];
+
+const evidenceCards = [
+  {
+    image: analysisImage,
+    tag: 'Termografía & Cartografía',
+    title: 'Análisis Multiespectral y Térmico',
+    desc: 'Detección temprana de anomalías térmicas y estrés hídrico con sensores radiométricos de precisión.'
+  },
+  {
+    image: surveyImage,
+    tag: 'Topografía & Fotogrametría',
+    title: 'Modelado 3D y Ortomosaicos',
+    desc: 'Reconstrucción geoespacial de alta fidelidad con resolución centimétrica para cálculo de volúmenes.'
+  },
+  {
+    image: siteMonitoringImage,
+    tag: 'Infraestructura & Obras',
+    title: 'Seguimiento Operacional de Faena',
+    desc: 'Auditoría visual periódica y control de avance físico en proyectos industriales de gran escala.'
+  },
+  {
+    image: miningImage,
+    tag: 'Minería & Zonas Críticas',
+    title: 'Inspección en Áreas Confinadas',
+    desc: 'Exploración aérea segura en rajos, taludes e instalaciones de alto riesgo sin personal expuesto.'
+  },
+  {
+    image: fireImage,
+    tag: 'Gestión de Emergencias',
+    title: 'Monitoreo Táctico en Tiempo Real',
+    desc: 'Transmisión térmica continua para soporte en toma de decisiones críticas y control de siniestros.'
+  },
+  {
+    image: agricultureImage,
+    tag: 'Agricultura de Precisión',
+    title: 'Aplicación y Dispersión Dirigida',
+    desc: 'Eficiencia en dosificación y mapeo de índices vegetativos (NDVI/NDRE) en cultivos extensivos.'
+  },
+  {
+    image: powerlinesImage,
+    tag: 'Energía & Transmisión',
+    title: 'Diagnóstico de Activos Eléctricos',
+    desc: 'Inspección de alta resolución con zoom óptico para detección de puntos calientes en subestaciones.'
+  },
+  {
+    image: enterpriseDroneImage,
+    tag: 'Plataformas & Sensores',
+    title: 'Tecnología Aérea Industrial',
+    desc: 'Equipamiento certificado con sistemas RTK, redundancia de vuelo y versatilidad de carga útil.'
+  },
+  {
+    image: operationsImage,
+    tag: 'Operaciones en Terreno',
+    title: 'Estaciones de Mando Móviles',
+    desc: 'Procesamiento de datos en el lugar del vuelo y validación instantánea con el equipo cliente.'
+  }
+];
 ---
 
 <main>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Dronecap, inicio"><img src={logo.src} width="242" height="66" alt="Dronecap" /></a>
-    <nav aria-label="Navegación principal"><a href="#capacidades">Capacidades</a><a href="#metodo">Método</a><a href="#sectores">Sectores</a></nav>
-    <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Conversemos <span aria-hidden="true">↗</span></a>
+    <a class="brand" href="#inicio" aria-label="Dronecap, inicio">
+      <img src={logo.src} width="220" height="60" alt="Dronecap Innovación y Desarrollo" class="brand-logo-img" />
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#capacidades">Capacidades</a>
+      <a href="#metodo">Método</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#contacto" class="nav-contact-link">Contacto</a>
+    </nav>
+    <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
+      <span>Conversemos</span>
+      <span class="cta-arrow" aria-hidden="true">↗</span>
+    </a>
   </header>
 
   <section id="inicio" class="hero" aria-labelledby="hero-title">
+    <div class="hero-carousel" aria-hidden="true">
+      {heroSlides.map(([image, alt], index) => (
+        <div class:list={['hero-slide', { 'is-active': index === 0 }]} data-slide={index}>
+          <Image src={image} alt={alt} widths={[768, 1200, 1600]} sizes="100vw" loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} />
+        </div>
+      ))}
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-copy">
       <p class="eyebrow hero-kicker">Innovación y desarrollo <span></span> Dronecap</p>
       <h1 id="hero-title">Del desafío operacional a una solución aérea validada.</h1>
       <p class="hero-description">Exploramos, prototipamos y probamos aplicaciones con drones para que tu operación avance con información, precisión y criterio técnico.</p>
-      <div class="hero-actions"><a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">Conversemos sobre tu desafío <span aria-hidden="true">↗</span></a><a class="text-link" href="#metodo">Conoce cómo trabajamos <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-actions">
+        <a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Conversemos sobre tu desafío <span aria-hidden="true">↗</span>
+        </a>
+        <a class="text-link" href="#contacto">
+          Ver módulo de contacto <span aria-hidden="true">↓</span>
+        </a>
+      </div>
     </div>
-    <div class="hero-visual reveal-image">
-      <Image src={heroImage} alt="Operador de Dronecap realizando una prueba aérea en terreno" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 48vw" loading="eager" fetchpriority="high" />
-      <div class="hero-visual-overlay" aria-hidden="true"></div>
-      <div class="telemetry telemetry-top" aria-hidden="true"><span>PRUEBA DE CAMPO</span><b>01. / 04.</b></div><div class="telemetry telemetry-bottom" aria-hidden="true"><span>COORDENADAS DE INNOVACIÓN</span><b>−36.820° / −73.044°</b></div>
-    </div>
+    <div class="telemetry telemetry-top" aria-hidden="true"><span>PRUEBA DE CAMPO</span><b>01. / 03.</b></div>
+    <div class="telemetry telemetry-bottom" aria-hidden="true"><span>COORDENADAS DE INNOVACIÓN</span><b>−36.820° / −73.044°</b></div>
     <div class="hero-scroll" aria-hidden="true"><span>Desplaza para explorar</span><i></i></div>
   </section>
 
-  <section class="trust-strip" aria-label="Respaldo de Dronecap"><p>Soluciones aéreas desarrolladas desde la experiencia operacional.</p><ul><li><strong>+7</strong> años de experiencia</li><li><strong>AOC 1409</strong> instrucción certificada</li><li><strong>Chile</strong> operación profesional</li></ul></section>
+  <section class="trust-strip" aria-label="Respaldo de Dronecap">
+    <p>Soluciones aéreas desarrolladas desde la experiencia operacional.</p>
+    <ul>
+      <li><strong>+7</strong> años de experiencia</li>
+      <li><strong>AOC 1409</strong> instrucción certificada</li>
+      <li><strong>Chile</strong> operación profesional</li>
+    </ul>
+  </section>
 
   <section id="capacidades" class="capabilities section-shell" aria-labelledby="capabilities-title">
-    <div class="section-intro"><p class="eyebrow">Dónde ponemos la tecnología a trabajar</p><h2 id="capabilities-title">La innovación no parte por el dron. Parte por una pregunta bien planteada.</h2></div>
-    <div class="capability-list">{capabilities.map(([id, title, text]) => <article class="capability-card reveal-card"><span class="capability-id">{id}</span><div><h3>{title}</h3><p>{text}</p></div><span class="card-arrow" aria-hidden="true">↗</span></article>)}</div>
+    <div class="section-intro">
+      <p class="eyebrow">Dónde ponemos la tecnología a trabajar</p>
+      <h2 id="capabilities-title">La innovación no parte por el dron. Parte por una pregunta bien planteada.</h2>
+    </div>
+    <div class="capability-list">
+      {capabilities.map(([id, title, text]) => (
+        <article class="capability-card reveal-card">
+          <span class="capability-id">{id}</span>
+          <div>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section id="metodo" class="method" aria-labelledby="method-title">
-    <div class="method-heading section-shell"><p class="eyebrow eyebrow-light">Un proceso aterrizado</p><h2 id="method-title">Probamos con rigor<br />para avanzar con confianza.</h2></div>
+    <div class="method-heading section-shell">
+      <p class="eyebrow eyebrow-light">Un proceso aterrizado</p>
+      <h2 id="method-title">Probamos con rigor<br />para avanzar con confianza.</h2>
+    </div>
     <div class="method-stage">
-      <svg class="flight-path" viewBox="0 0 1200 560" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M-30 420C190 410 168 155 401 170c232 15 125 249 370 245 238-4 190-221 459-245" pathLength="1" /></svg>
       <div class="method-grid section-shell">
         <article class="method-step"><span>01</span><h3>Entender</h3><p>Delimitamos el desafío, el entorno y la información que realmente hace falta.</p></article>
         <article class="method-step"><span>02</span><h3>Prototipar</h3><p>Definimos una prueba aérea posible: plataforma, captura y condiciones de operación.</p></article>
@@ -60,32 +176,347 @@ const sectors = ['Minería', 'Construcción', 'Agricultura', 'Seguridad'];
     </div>
   </section>
 
-  <section class="evidence section-shell" aria-label="Tecnología aplicada">
-    <div class="evidence-copy"><p class="eyebrow">Tecnología que se puede observar</p><h2>Una mirada aérea vale más cuando se conecta con lo que ocurre abajo.</h2><p>Desde la planificación de un vuelo hasta la revisión de imágenes, cada prueba busca generar una señal más clara para el equipo que toma decisiones.</p></div>
-    <div class="evidence-board"><figure class="evidence-main"><Image src={analysisImage} alt="Visualización térmica y cartográfica capturada desde un dron" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 46vw" loading="lazy" /><figcaption>Captura y análisis visual</figcaption></figure><div class="evidence-details"><figure class="evidence-small evidence-operator"><Image src={operationsImage} alt="Operador analizando información en terreno" widths={[525, 920]} sizes="(max-width: 900px) 48vw, 20vw" loading="lazy" /></figure><figure class="evidence-small evidence-thermal"><Image src={thermalImage} alt="Dispositivo móvil mostrando una visualización térmica" widths={[450, 920]} sizes="(max-width: 900px) 48vw, 20vw" loading="lazy" /></figure></div></div>
+  <!-- SECCIÓN: TECNOLOGÍA QUE SE PUEDE OBSERVAR (Lectura infinita tranquila y de alta calidad) -->
+  <section id="tecnologia" class="evidence" aria-labelledby="evidence-title">
+    <div class="evidence-intro section-shell">
+      <div>
+        <p class="eyebrow">Tecnología que se puede observar</p>
+        <h2 id="evidence-title">Una mirada aérea vale más cuando se conecta con lo que ocurre abajo.</h2>
+      </div>
+      <div class="evidence-summary">
+        <p>Lectura continua de capturas reales, sensores ópticos, térmicos y modelado en terreno. Pasa el cursor o pulsa para detener la lectura y analizar los detalles.</p>
+        <div class="evidence-controls">
+          <button class="evidence-toggle" type="button" aria-pressed="false" id="galleryToggle">
+            <span class="control-icon" aria-hidden="true">⏸</span>
+            <span class="control-label">Pausar movimiento</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="evidence-viewport" tabindex="0" aria-label="Galería infinita de tecnología aplicada con drones">
+      <div class="evidence-track" data-evidence-track>
+        {/* Doble set de tarjetas para ciclo continuo infinito y sin saltos */}
+        {[...evidenceCards, ...evidenceCards].map((card, index) => (
+          <article class="evidence-card" aria-hidden={index >= evidenceCards.length ? 'true' : undefined}>
+            <div class="evidence-image-wrapper">
+              <Image 
+                src={card.image} 
+                alt={index >= evidenceCards.length ? '' : card.title} 
+                widths={[480, 680, 960]} 
+                sizes="(max-width: 768px) 85vw, 420px" 
+                loading="lazy" 
+                class="evidence-img"
+              />
+              <div class="evidence-badge-overlay">
+                <span class="tech-tag">{card.tag}</span>
+                <span class="tech-idx">0{(index % evidenceCards.length) + 1}</span>
+              </div>
+            </div>
+            <div class="evidence-content">
+              <h3 class="evidence-card-title">{card.title}</h3>
+              <p class="evidence-card-desc">{card.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+    <div class="evidence-footer section-shell">
+      <p class="evidence-caption">Bitácora de vuelos operacionales, sensórica aérea y analítica aplicada en terreno.</p>
+    </div>
   </section>
 
   <section id="sectores" class="sectors" aria-labelledby="sectors-title">
-    <div class="sector-image reveal-image"><Image src={landscapeImage} alt="Vista aérea de un territorio forestal" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 45vw" loading="lazy" /></div>
-    <div class="sectors-copy"><p class="eyebrow eyebrow-light">Desafíos distintos, una mirada común</p><h2 id="sectors-title">Innovar es adaptar la tecnología al contexto, no al revés.</h2><div class="sector-list">{sectors.map((sector, index) => <span><b>0{index + 1}</b>{sector}</span>)}</div><a class="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">Hablemos de tu operación <span aria-hidden="true">↗</span></a></div>
+    <div class="sector-image reveal-image">
+      <Image src={landscapeImage} alt="Vista aérea de un territorio forestal" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 45vw" loading="lazy" />
+    </div>
+    <div class="sectors-copy">
+      <p class="eyebrow eyebrow-light">Desafíos distintos, una mirada común</p>
+      <h2 id="sectors-title">Innovar es adaptar la tecnología al contexto, no al revés.</h2>
+      <div class="sector-list">
+        {sectors.map((sector, index) => <span><b>0{index + 1}</b>{sector}</span>)}
+      </div>
+      <a class="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">
+        Hablemos de tu operación <span aria-hidden="true">↗</span>
+      </a>
+    </div>
   </section>
 
-  <section class="closing section-shell" aria-labelledby="closing-title"><p class="eyebrow">El próximo piloto puede partir hoy</p><h2 id="closing-title">Cuéntanos el desafío.<br /><em>Diseñemos la prueba.</em></h2><a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">Escribir por WhatsApp <span aria-hidden="true">↗</span></a></section>
+  <!-- MÓDULO DE CONTACTO COMPLETO Y ACCESIBLE -->
+  <section id="contacto" class="contact section-shell" aria-labelledby="contact-title">
+    <div class="contact-heading">
+      <div>
+        <p class="eyebrow">Canales directos</p>
+        <h2 id="contact-title">Módulo de Contacto</h2>
+      </div>
+      <p>Estamos listos para evaluar tu proyecto, resolver dudas técnicas o coordinar una demostración en terreno. Elige tu canal de preferencia.</p>
+    </div>
+
+    <div class="contact-module-grid">
+      <!-- Tarjeta Teléfono -->
+      <div class="contact-hub-card contact-card-phone">
+        <div class="hub-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+        <div class="hub-card-body">
+          <span class="hub-card-tag">Línea Telefónica Directa</span>
+          <h3 class="hub-card-value">+56 9 4926 4903</h3>
+          <p class="hub-card-meta">Atención técnica y coordinación de pilotos</p>
+        </div>
+        <div class="hub-card-actions">
+          <a href="tel:+56949264903" class="hub-action-btn primary-btn">
+            Llamar ahora <span aria-hidden="true">↗</span>
+          </a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" class="hub-action-btn secondary-btn">
+            WhatsApp <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta Gmail / Correo -->
+      <div class="contact-hub-card contact-card-email">
+        <div class="hub-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <div class="hub-card-body">
+          <span class="hub-card-tag">Correo Electrónico (Gmail)</span>
+          <h3 class="hub-card-value">contacto@dronecap.cl</h3>
+          <p class="hub-card-meta">Envíanos antecedentes, pliegos técnicos o consultas</p>
+        </div>
+        <div class="hub-card-actions">
+          <a href="mailto:contacto@dronecap.cl" class="hub-action-btn primary-btn">
+            Enviar correo <span aria-hidden="true">↗</span>
+          </a>
+          <button type="button" class="hub-action-btn secondary-btn copy-email-btn" data-email="contacto@dronecap.cl">
+            <span class="copy-text">Copiar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Horario & Disponibilidad -->
+      <div class="contact-hub-card contact-card-hours">
+        <div class="hub-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <div class="hub-card-body">
+          <span class="hub-card-tag">Disponibilidad de Operación</span>
+          <h3 class="hub-card-value">09:00 – 21:00 hrs</h3>
+          <p class="hub-card-meta">Lunes a Viernes · Guardias de emergencia 24/7</p>
+        </div>
+        <div class="hub-status-pill">
+          <span class="status-dot"></span> Operativo en todo Chile
+        </div>
+      </div>
+    </div>
+
+    <!-- Módulo Google Maps y Dirección Física -->
+    <div class="contact-map-module">
+      <div class="map-info-pane">
+        <div class="map-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <div class="map-info-text">
+          <span class="map-eyebrow">Dirección y Base de Operaciones</span>
+          <h3 class="map-address">Colón 2945, Talcahuano</h3>
+          <p class="map-region">Región del Biobío, Chile</p>
+        </div>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=Col%C3%B3n%202945%2C%20Talcahuano%2C%20Chile" 
+          target="_blank" 
+          rel="noreferrer" 
+          class="button button-red map-directions-btn"
+        >
+          <span>Abrir en Google Maps</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="map-iframe-container">
+        <iframe 
+          title="Ubicación Dronecap en Google Maps - Colón 2945, Talcahuano" 
+          src="https://www.google.com/maps?q=Col%C3%B3n%202945%2C%20Talcahuano%2C%20Chile&output=embed" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing section-shell" aria-labelledby="closing-title">
+    <p class="eyebrow">El próximo piloto puede partir hoy</p>
+    <h2 id="closing-title">Cuéntanos el desafío.<br /><em>Diseñemos la prueba.</em></h2>
+    <a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">
+      Escribir por WhatsApp <span aria-hidden="true">↗</span>
+    </a>
+  </section>
 </main>
 
-<footer class="site-footer"><img src={logo.src} width="242" height="66" alt="Dronecap" /><div><a href="mailto:contacto@dronecap.cl">contacto@dronecap.cl</a><a href="tel:+56949264903">+56 9 4926 4903</a></div><p>Lunes a viernes · 09:00–21:00</p><span>© {new Date().getFullYear()} Dronecap</span></footer>
-<a class="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Conversar con Dronecap por WhatsApp"><img src={whatsappIcon.src} width="64" height="64" alt="" /><span>Hablemos</span></a>
+<footer class="site-footer">
+  <img src={logo.src} width="220" height="60" alt="Dronecap" class="footer-logo-img" />
+  <div>
+    <a href="mailto:contacto@dronecap.cl">contacto@dronecap.cl</a>
+    <a href="tel:+56949264903">+56 9 4926 4903</a>
+  </div>
+  <p>Lunes a viernes · 09:00–21:00<br /><small>Colón 2945, Talcahuano, Chile</small></p>
+  <span>© {new Date().getFullYear()} Dronecap · Innovación y Desarrollo</span>
+</footer>
+
+<!-- Botón flotante WhatsApp con degradado azul translúcido y glassmorphism -->
+<a class="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Conversar con Dronecap por WhatsApp">
+  <img src={whatsappIcon.src} width="40" height="40" alt="WhatsApp" />
+  <span>Hablemos</span>
+</a>
 
 <script>
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   gsap.registerPlugin(ScrollTrigger);
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let heroTimer: number | undefined;
+  let galleryTween: gsap.core.Tween | undefined;
+  const cleanupCallbacks: Array<() => void> = [];
+
+  // Botón para copiar correo con feedback visual
+  const copyBtn = document.querySelector<HTMLButtonElement>('.copy-email-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      const email = copyBtn.getAttribute('data-email') || 'contacto@dronecap.cl';
+      try {
+        await navigator.clipboard.writeText(email);
+        const textSpan = copyBtn.querySelector('.copy-text');
+        if (textSpan) {
+          const original = textSpan.textContent;
+          textSpan.textContent = '¡Copiado!';
+          copyBtn.classList.add('is-copied');
+          setTimeout(() => {
+            textSpan.textContent = original;
+            copyBtn.classList.remove('is-copied');
+          }, 2200);
+        }
+      } catch (err) {
+        console.error('Error al copiar correo:', err);
+      }
+    });
+  }
+
   const context = gsap.context(() => {
     if (reduceMotion) return;
-    gsap.timeline({ defaults: { ease: 'power3.out' } }).from('.site-header', { y: -20, autoAlpha: 0, duration: 0.55 }).from('.hero-kicker, .hero h1, .hero-description, .hero-actions', { y: 24, autoAlpha: 0, duration: 0.62, stagger: 0.09 }, '-=0.18').from('.hero-visual', { y: 20, scale: 0.985, autoAlpha: 0, duration: 0.82 }, '-=0.58').from('.telemetry', { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, '-=0.38');
-    gsap.fromTo('.flight-path path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.method-stage', start: 'top 75%', end: 'bottom 65%', scrub: 0.65 } });
-    gsap.to('.whatsapp-float img', { y: -4, duration: 0.7, ease: 'sine.inOut', repeat: 1, yoyo: true, delay: 1.2 });
+
+    gsap.timeline({ defaults: { ease: 'power3.out' } })
+      .from('.site-header', { y: -20, autoAlpha: 0, duration: 0.55 })
+      .from('.hero-kicker, .hero h1, .hero-description, .hero-actions', { y: 24, autoAlpha: 0, duration: 0.62, stagger: 0.09 }, '-=0.18')
+      .from('.hero-carousel', { autoAlpha: 0, duration: 0.9 }, '-=0.72')
+      .from('.telemetry', { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, '-=0.38');
+
+    // Carrusel Hero
+    const slides = gsap.utils.toArray<HTMLElement>('.hero-slide');
+    if (slides.length > 1) {
+      let activeSlide = 0;
+      heroTimer = window.setInterval(() => {
+        if (document.hidden) return;
+        const previous = slides[activeSlide];
+        activeSlide = (activeSlide + 1) % slides.length;
+        const next = slides[activeSlide];
+        previous.classList.remove('is-active');
+        next.classList.add('is-active');
+        gsap.to(previous, { autoAlpha: 0, duration: 1.15, ease: 'power2.out' });
+        gsap.fromTo(next, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.15, ease: 'power2.out' });
+      }, 6200);
+    }
+
+    // Galería infinita de lectura tranquila y fluida (Tecnología que se puede observar)
+    const track = document.querySelector<HTMLElement>('[data-evidence-track]');
+    const viewport = document.querySelector<HTMLElement>('.evidence-viewport');
+    const toggle = document.querySelector<HTMLButtonElement>('#galleryToggle');
+
+    if (track && viewport && toggle) {
+      let manuallyPaused = false;
+      let interactionPaused = false;
+
+      const setupInfiniteScroll = () => {
+        galleryTween?.kill();
+        const halfWidth = track.scrollWidth / 2;
+        if (!halfWidth) return;
+
+        // Velocidad tranquila: ~58 segundos para recorrer la mitad de la pista de forma imperceptible y cómoda
+        gsap.set(track, { x: 0 });
+        galleryTween = gsap.to(track, {
+          x: -halfWidth,
+          duration: 58,
+          ease: 'none',
+          repeat: -1,
+          modifiers: {
+            x: gsap.utils.unitize((x) => {
+              const currentX = parseFloat(x);
+              return (currentX % -halfWidth) + 'px';
+            })
+          }
+        });
+      };
+
+      const pauseGallery = () => galleryTween?.pause();
+      const resumeGallery = () => {
+        if (!manuallyPaused && !document.hidden) galleryTween?.play();
+      };
+
+      const updateToggleUI = () => {
+        toggle.setAttribute('aria-pressed', String(manuallyPaused));
+        const iconSpan = toggle.querySelector('.control-icon');
+        const labelSpan = toggle.querySelector('.control-label');
+        if (iconSpan) iconSpan.textContent = manuallyPaused ? '▶' : '⏸';
+        if (labelSpan) labelSpan.textContent = manuallyPaused ? 'Reanudar movimiento' : 'Pausar movimiento';
+      };
+
+      const onToggle = () => {
+        manuallyPaused = !manuallyPaused;
+        manuallyPaused ? pauseGallery() : resumeGallery();
+        updateToggleUI();
+      };
+
+      const onPointerEnter = () => { interactionPaused = true; pauseGallery(); };
+      const onPointerLeave = () => { interactionPaused = false; resumeGallery(); };
+      const onFocusIn = () => { interactionPaused = true; pauseGallery(); };
+      const onFocusOut = (event: FocusEvent) => {
+        if (event.relatedTarget instanceof Node && viewport.contains(event.relatedTarget)) return;
+        interactionPaused = false;
+        resumeGallery();
+      };
+      const onVisibilityChange = () => {
+        if (document.hidden) pauseGallery();
+        else if (!interactionPaused && !manuallyPaused) resumeGallery();
+      };
+
+      setupInfiniteScroll();
+
+      toggle.addEventListener('click', onToggle);
+      viewport.addEventListener('pointerenter', onPointerEnter);
+      viewport.addEventListener('pointerleave', onPointerLeave);
+      viewport.addEventListener('focusin', onFocusIn);
+      viewport.addEventListener('focusout', onFocusOut);
+      document.addEventListener('visibilitychange', onVisibilityChange);
+      window.addEventListener('resize', setupInfiniteScroll);
+
+      cleanupCallbacks.push(() => {
+        toggle.removeEventListener('click', onToggle);
+        viewport.removeEventListener('pointerenter', onPointerEnter);
+        viewport.removeEventListener('pointerleave', onPointerLeave);
+        viewport.removeEventListener('focusin', onFocusIn);
+        viewport.removeEventListener('focusout', onFocusOut);
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+        window.removeEventListener('resize', setupInfiniteScroll);
+      });
+    }
+
+    // Micro-animación suave en el botón flotante
+    gsap.to('.whatsapp-float img', { y: -3, duration: 0.8, ease: 'sine.inOut', repeat: 1, yoyo: true, delay: 1.5 });
   });
-  window.addEventListener('pagehide', () => context.revert(), { once: true });
+
+  window.addEventListener('pagehide', () => {
+    if (heroTimer) window.clearInterval(heroTimer);
+    galleryTween?.kill();
+    cleanupCallbacks.forEach((cleanup) => cleanup());
+    context.revert();
+  }, { once: true });
 </script>
+
