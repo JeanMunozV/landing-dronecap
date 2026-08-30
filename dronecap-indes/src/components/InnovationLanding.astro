@@ -13,6 +13,7 @@ import miningImage from '../assets/dronecap/news-mining.webp';
 import fireImage from '../assets/dronecap/news-fire.webp';
 import enterpriseDroneImage from '../assets/dronecap/eq-04.webp';
 import powerlinesImage from '../assets/dronecap/gal-11.webp';
+import closingImage from '../assets/dronecap/eq-hero-02.webp';
 import logo from '../assets/dronecap-logo.png';
 import whatsappIcon from '../assets/WhatsApp_icon.png';
 
@@ -34,55 +35,55 @@ const evidenceCards = [
     image: analysisImage,
     tag: 'Termografía & Cartografía',
     title: 'Análisis Multiespectral y Térmico',
-    desc: 'Detección temprana de anomalías térmicas y estrés hídrico con sensores radiométricos de precisión.'
+    desc: 'Lectura visual y térmica de patrones que ayudan a orientar la inspección y el análisis en terreno.'
   },
   {
     image: surveyImage,
     tag: 'Topografía & Fotogrametría',
     title: 'Modelado 3D y Ortomosaicos',
-    desc: 'Reconstrucción geoespacial de alta fidelidad con resolución centimétrica para cálculo de volúmenes.'
+    desc: 'Modelado del terreno y generación de ortomosaicos para revisar superficies y cambios operacionales.'
   },
   {
     image: siteMonitoringImage,
     tag: 'Infraestructura & Obras',
     title: 'Seguimiento Operacional de Faena',
-    desc: 'Auditoría visual periódica y control de avance físico en proyectos industriales de gran escala.'
+    desc: 'Registro visual periódico para acompañar la revisión de avance y condiciones de una operación.'
   },
   {
     image: miningImage,
     tag: 'Minería & Zonas Críticas',
     title: 'Inspección en Áreas Confinadas',
-    desc: 'Exploración aérea segura en rajos, taludes e instalaciones de alto riesgo sin personal expuesto.'
+    desc: 'Apoyo a la inspección de zonas complejas, como taludes e instalaciones de difícil acceso.'
   },
   {
     image: fireImage,
     tag: 'Gestión de Emergencias',
     title: 'Monitoreo Táctico en Tiempo Real',
-    desc: 'Transmisión térmica continua para soporte en toma de decisiones críticas y control de siniestros.'
+    desc: 'Apoyo visual aéreo para monitoreo y evaluación de situaciones que requieren atención en terreno.'
   },
   {
     image: agricultureImage,
     tag: 'Agricultura de Precisión',
     title: 'Aplicación y Dispersión Dirigida',
-    desc: 'Eficiencia en dosificación y mapeo de índices vegetativos (NDVI/NDRE) en cultivos extensivos.'
+    desc: 'Observación aérea de cultivos y pruebas de aplicación adaptadas a cada contexto productivo.'
   },
   {
     image: powerlinesImage,
     tag: 'Energía & Transmisión',
     title: 'Diagnóstico de Activos Eléctricos',
-    desc: 'Inspección de alta resolución con zoom óptico para detección de puntos calientes en subestaciones.'
+    desc: 'Revisión aérea de infraestructura energética y otros activos ubicados en zonas de acceso complejo.'
   },
   {
     image: enterpriseDroneImage,
     tag: 'Plataformas & Sensores',
     title: 'Tecnología Aérea Industrial',
-    desc: 'Equipamiento certificado con sistemas RTK, redundancia de vuelo y versatilidad de carga útil.'
+    desc: 'Selección de plataformas y sensores según el desafío, el entorno y la información requerida.'
   },
   {
     image: operationsImage,
     tag: 'Operaciones en Terreno',
     title: 'Estaciones de Mando Móviles',
-    desc: 'Procesamiento de datos en el lugar del vuelo y validación instantánea con el equipo cliente.'
+    desc: 'Revisión de información capturada junto al equipo para orientar las siguientes decisiones.'
   }
 ];
 ---
@@ -92,13 +93,16 @@ const evidenceCards = [
     <a class="brand" href="#inicio" aria-label="Dronecap, inicio">
       <img src={logo.src} width="220" height="60" alt="Dronecap Innovación y Desarrollo" class="brand-logo-img" />
     </a>
-    <nav aria-label="Navegación principal">
+    <nav id="primary-navigation" aria-label="Navegación principal">
       <a href="#capacidades">Capacidades</a>
       <a href="#metodo">Método</a>
       <a href="#tecnologia">Tecnología</a>
       <a href="#sectores">Sectores</a>
       <a href="#contacto" class="nav-contact-link">Contacto</a>
     </nav>
+    <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
     <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
       <span>Conversemos</span>
       <span class="cta-arrow" aria-hidden="true">↗</span>
@@ -301,11 +305,9 @@ const evidenceCards = [
         <div class="hub-card-body">
           <span class="hub-card-tag">Disponibilidad de Operación</span>
           <h3 class="hub-card-value">09:00 – 21:00 hrs</h3>
-          <p class="hub-card-meta">Lunes a Viernes · Guardias de emergencia 24/7</p>
+          <p class="hub-card-meta">Lunes a viernes · Atención y coordinación de operaciones</p>
         </div>
-        <div class="hub-status-pill">
-          <span class="status-dot"></span> Operativo en todo Chile
-        </div>
+        <div class="hub-status-pill">Agenda sujeta a coordinación</div>
       </div>
     </div>
 
@@ -342,12 +344,21 @@ const evidenceCards = [
     </div>
   </section>
 
-  <section class="closing section-shell" aria-labelledby="closing-title">
-    <p class="eyebrow">El próximo piloto puede partir hoy</p>
-    <h2 id="closing-title">Cuéntanos el desafío.<br /><em>Diseñemos la prueba.</em></h2>
-    <a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">
-      Escribir por WhatsApp <span aria-hidden="true">↗</span>
-    </a>
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="closing-photo" aria-hidden="true"><Image src={closingImage} alt="Operación aérea de drones sobre bosque" widths={[768, 1200, 1600, 1920]} sizes="100vw" loading="lazy" /></div>
+    <div class="closing-overlay" aria-hidden="true"></div>
+    <div class="closing-inner section-shell">
+      <div>
+        <p class="eyebrow eyebrow-light">Próxima misión</p>
+        <h2 id="closing-title">El próximo piloto<br />puede partir <em>hoy.</em></h2>
+        <p class="closing-description">Conversemos sobre el desafío y definamos una prueba posible en terreno.</p>
+        <div class="closing-actions">
+          <a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">Plantear un desafío <span aria-hidden="true">↗</span></a>
+          <a class="closing-phone" href="tel:+56949264903">Llamar al equipo <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <p class="closing-status"><span></span> Listos para coordinar una prueba</p>
+    </div>
   </section>
 </main>
 
@@ -376,6 +387,30 @@ const evidenceCards = [
   let heroTimer: number | undefined;
   let galleryTween: gsap.core.Tween | undefined;
   const cleanupCallbacks: Array<() => void> = [];
+
+  const mobileMenuToggle = document.querySelector<HTMLButtonElement>('.mobile-menu-toggle');
+  const primaryNavigation = document.querySelector<HTMLElement>('#primary-navigation');
+  if (mobileMenuToggle && primaryNavigation) {
+    const closeMenu = () => {
+      primaryNavigation.classList.remove('is-open');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenuToggle.setAttribute('aria-label', 'Abrir menú');
+    };
+    const toggleMenu = () => {
+      const isOpen = primaryNavigation.classList.toggle('is-open');
+      mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    };
+    const onMenuKeydown = (event: KeyboardEvent) => { if (event.key === 'Escape') closeMenu(); };
+    mobileMenuToggle.addEventListener('click', toggleMenu);
+    primaryNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', onMenuKeydown);
+    cleanupCallbacks.push(() => {
+      mobileMenuToggle.removeEventListener('click', toggleMenu);
+      primaryNavigation.querySelectorAll('a').forEach((link) => link.removeEventListener('click', closeMenu));
+      document.removeEventListener('keydown', onMenuKeydown);
+    });
+  }
 
   // Botón para copiar correo con feedback visual
   const copyBtn = document.querySelector<HTMLButtonElement>('.copy-email-btn');
@@ -409,6 +444,15 @@ const evidenceCards = [
       .from('.hero-carousel', { autoAlpha: 0, duration: 0.9 }, '-=0.72')
       .from('.telemetry', { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, '-=0.38');
 
+    const header = document.querySelector<HTMLElement>('.site-header');
+    if (header) {
+      const headerTrigger = ScrollTrigger.create({
+        start: 18,
+        onUpdate: (self) => header.classList.toggle('is-scrolled', self.scroll() > 18),
+      });
+      cleanupCallbacks.push(() => headerTrigger.kill());
+    }
+
     // Carrusel Hero
     const slides = gsap.utils.toArray<HTMLElement>('.hero-slide');
     if (slides.length > 1) {
@@ -435,24 +479,20 @@ const evidenceCards = [
       let interactionPaused = false;
 
       const setupInfiniteScroll = () => {
+        const progress = galleryTween?.progress() ?? 0;
         galleryTween?.kill();
         const halfWidth = track.scrollWidth / 2;
         if (!halfWidth) return;
 
-        // Velocidad tranquila: ~58 segundos para recorrer la mitad de la pista de forma imperceptible y cómoda
         gsap.set(track, { x: 0 });
         galleryTween = gsap.to(track, {
           x: -halfWidth,
           duration: 58,
           ease: 'none',
           repeat: -1,
-          modifiers: {
-            x: gsap.utils.unitize((x) => {
-              const currentX = parseFloat(x);
-              return (currentX % -halfWidth) + 'px';
-            })
-          }
         });
+        galleryTween.progress(progress);
+        if (manuallyPaused || interactionPaused || document.hidden) pauseGallery();
       };
 
       const pauseGallery = () => galleryTween?.pause();
@@ -487,7 +527,9 @@ const evidenceCards = [
         else if (!interactionPaused && !manuallyPaused) resumeGallery();
       };
 
-      setupInfiniteScroll();
+      const resizeObserver = new ResizeObserver(() => window.requestAnimationFrame(setupInfiniteScroll));
+      resizeObserver.observe(track);
+      window.requestAnimationFrame(setupInfiniteScroll);
 
       toggle.addEventListener('click', onToggle);
       viewport.addEventListener('pointerenter', onPointerEnter);
@@ -495,8 +537,6 @@ const evidenceCards = [
       viewport.addEventListener('focusin', onFocusIn);
       viewport.addEventListener('focusout', onFocusOut);
       document.addEventListener('visibilitychange', onVisibilityChange);
-      window.addEventListener('resize', setupInfiniteScroll);
-
       cleanupCallbacks.push(() => {
         toggle.removeEventListener('click', onToggle);
         viewport.removeEventListener('pointerenter', onPointerEnter);
@@ -504,9 +544,22 @@ const evidenceCards = [
         viewport.removeEventListener('focusin', onFocusIn);
         viewport.removeEventListener('focusout', onFocusOut);
         document.removeEventListener('visibilitychange', onVisibilityChange);
-        window.removeEventListener('resize', setupInfiniteScroll);
+        resizeObserver.disconnect();
       });
     }
+
+    gsap.from('.closing-inner', {
+      y: 28,
+      autoAlpha: 0,
+      duration: 0.8,
+      scrollTrigger: { trigger: '.closing', start: 'top 78%' },
+    });
+    gsap.from('.closing-photo img', {
+      scale: 1.06,
+      duration: 1.15,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: '.closing', start: 'top 78%' },
+    });
 
     // Micro-animación suave en el botón flotante
     gsap.to('.whatsapp-float img', { y: -3, duration: 0.8, ease: 'sine.inOut', repeat: 1, yoyo: true, delay: 1.5 });
@@ -519,4 +572,3 @@ const evidenceCards = [
     context.revert();
   }, { once: true });
 </script>
-
