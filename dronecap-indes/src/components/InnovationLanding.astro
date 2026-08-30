@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/dronecap/svc-06.webp';
+import analysisImage from '../assets/dronecap/aero-03.webp';
+import operationsImage from '../assets/dronecap/gal-01.webp';
+import thermalImage from '../assets/dronecap/svc-04.webp';
+import landscapeImage from '../assets/dronecap/eq-hero-01.webp';
+import logo from '../assets/dronecap-logo.svg';
+import whatsappIcon from '../assets/whatsapp.svg';
+
+const whatsappUrl = 'https://wa.me/56949264903?text=Hola%20Dronecap%2C%20quisiera%20conversar%20sobre%20un%20desaf%C3%ADo%20de%20innovaci%C3%B3n%20y%20desarrollo%20con%20drones.';
+const capabilities = [
+  ['01', 'Captura que se adapta al terreno', 'Evaluamos plataformas, sensores y rutas de vuelo para levantar información útil sin exponer innecesariamente a los equipos.'],
+  ['02', 'Datos listos para decidir', 'Convertimos observaciones aéreas en una lectura clara del terreno, las estructuras o la operación que necesitas comprender.'],
+  ['03', 'Pruebas que acercan la escala', 'Diseñamos pilotos de trabajo para validar una aplicación antes de integrarla a una operación de mayor alcance.'],
+];
+const sectors = ['Minería', 'Construcción', 'Agricultura', 'Seguridad'];
+---
+
+<main>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Dronecap, inicio"><img src={logo.src} width="242" height="66" alt="Dronecap" /></a>
+    <nav aria-label="Navegación principal"><a href="#capacidades">Capacidades</a><a href="#metodo">Método</a><a href="#sectores">Sectores</a></nav>
+    <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Conversemos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <section id="inicio" class="hero" aria-labelledby="hero-title">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow hero-kicker">Innovación y desarrollo <span></span> Dronecap</p>
+      <h1 id="hero-title">Del desafío operacional a una solución aérea validada.</h1>
+      <p class="hero-description">Exploramos, prototipamos y probamos aplicaciones con drones para que tu operación avance con información, precisión y criterio técnico.</p>
+      <div class="hero-actions"><a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">Conversemos sobre tu desafío <span aria-hidden="true">↗</span></a><a class="text-link" href="#metodo">Conoce cómo trabajamos <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="hero-visual reveal-image">
+      <Image src={heroImage} alt="Operador de Dronecap realizando una prueba aérea en terreno" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 48vw" loading="eager" fetchpriority="high" />
+      <div class="hero-visual-overlay" aria-hidden="true"></div>
+      <div class="telemetry telemetry-top" aria-hidden="true"><span>PRUEBA DE CAMPO</span><b>01. / 04.</b></div><div class="telemetry telemetry-bottom" aria-hidden="true"><span>COORDENADAS DE INNOVACIÓN</span><b>−36.820° / −73.044°</b></div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span>Desplaza para explorar</span><i></i></div>
+  </section>
+
+  <section class="trust-strip" aria-label="Respaldo de Dronecap"><p>Soluciones aéreas desarrolladas desde la experiencia operacional.</p><ul><li><strong>+7</strong> años de experiencia</li><li><strong>AOC 1409</strong> instrucción certificada</li><li><strong>Chile</strong> operación profesional</li></ul></section>
+
+  <section id="capacidades" class="capabilities section-shell" aria-labelledby="capabilities-title">
+    <div class="section-intro"><p class="eyebrow">Dónde ponemos la tecnología a trabajar</p><h2 id="capabilities-title">La innovación no parte por el dron. Parte por una pregunta bien planteada.</h2></div>
+    <div class="capability-list">{capabilities.map(([id, title, text]) => <article class="capability-card reveal-card"><span class="capability-id">{id}</span><div><h3>{title}</h3><p>{text}</p></div><span class="card-arrow" aria-hidden="true">↗</span></article>)}</div>
+  </section>
+
+  <section id="metodo" class="method" aria-labelledby="method-title">
+    <div class="method-heading section-shell"><p class="eyebrow eyebrow-light">Un proceso aterrizado</p><h2 id="method-title">Probamos con rigor<br />para avanzar con confianza.</h2></div>
+    <div class="method-stage">
+      <svg class="flight-path" viewBox="0 0 1200 560" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M-30 420C190 410 168 155 401 170c232 15 125 249 370 245 238-4 190-221 459-245" pathLength="1" /></svg>
+      <div class="method-grid section-shell">
+        <article class="method-step"><span>01</span><h3>Entender</h3><p>Delimitamos el desafío, el entorno y la información que realmente hace falta.</p></article>
+        <article class="method-step"><span>02</span><h3>Prototipar</h3><p>Definimos una prueba aérea posible: plataforma, captura y condiciones de operación.</p></article>
+        <article class="method-step"><span>03</span><h3>Validar</h3><p>Contrastamos el piloto en terreno para conocer sus límites y oportunidades.</p></article>
+        <article class="method-step"><span>04</span><h3>Preparar</h3><p>Ordenamos los aprendizajes para evaluar su adopción en la operación.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="evidence section-shell" aria-label="Tecnología aplicada">
+    <div class="evidence-copy"><p class="eyebrow">Tecnología que se puede observar</p><h2>Una mirada aérea vale más cuando se conecta con lo que ocurre abajo.</h2><p>Desde la planificación de un vuelo hasta la revisión de imágenes, cada prueba busca generar una señal más clara para el equipo que toma decisiones.</p></div>
+    <div class="evidence-board"><figure class="evidence-main"><Image src={analysisImage} alt="Visualización térmica y cartográfica capturada desde un dron" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 46vw" loading="lazy" /><figcaption>Captura y análisis visual</figcaption></figure><div class="evidence-details"><figure class="evidence-small evidence-operator"><Image src={operationsImage} alt="Operador analizando información en terreno" widths={[525, 920]} sizes="(max-width: 900px) 48vw, 20vw" loading="lazy" /></figure><figure class="evidence-small evidence-thermal"><Image src={thermalImage} alt="Dispositivo móvil mostrando una visualización térmica" widths={[450, 920]} sizes="(max-width: 900px) 48vw, 20vw" loading="lazy" /></figure></div></div>
+  </section>
+
+  <section id="sectores" class="sectors" aria-labelledby="sectors-title">
+    <div class="sector-image reveal-image"><Image src={landscapeImage} alt="Vista aérea de un territorio forestal" widths={[640, 920]} sizes="(max-width: 900px) 100vw, 45vw" loading="lazy" /></div>
+    <div class="sectors-copy"><p class="eyebrow eyebrow-light">Desafíos distintos, una mirada común</p><h2 id="sectors-title">Innovar es adaptar la tecnología al contexto, no al revés.</h2><div class="sector-list">{sectors.map((sector, index) => <span><b>0{index + 1}</b>{sector}</span>)}</div><a class="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">Hablemos de tu operación <span aria-hidden="true">↗</span></a></div>
+  </section>
+
+  <section class="closing section-shell" aria-labelledby="closing-title"><p class="eyebrow">El próximo piloto puede partir hoy</p><h2 id="closing-title">Cuéntanos el desafío.<br /><em>Diseñemos la prueba.</em></h2><a class="button button-red" href={whatsappUrl} target="_blank" rel="noreferrer">Escribir por WhatsApp <span aria-hidden="true">↗</span></a></section>
+</main>
+
+<footer class="site-footer"><img src={logo.src} width="242" height="66" alt="Dronecap" /><div><a href="mailto:contacto@dronecap.cl">contacto@dronecap.cl</a><a href="tel:+56949264903">+56 9 4926 4903</a></div><p>Lunes a viernes · 09:00–21:00</p><span>© {new Date().getFullYear()} Dronecap</span></footer>
+<a class="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Conversar con Dronecap por WhatsApp"><img src={whatsappIcon.src} width="64" height="64" alt="" /><span>Hablemos</span></a>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const context = gsap.context(() => {
+    if (reduceMotion) return;
+    gsap.timeline({ defaults: { ease: 'power3.out' } }).from('.site-header', { y: -20, autoAlpha: 0, duration: 0.55 }).from('.hero-kicker, .hero h1, .hero-description, .hero-actions', { y: 24, autoAlpha: 0, duration: 0.62, stagger: 0.09 }, '-=0.18').from('.hero-visual', { y: 20, scale: 0.985, autoAlpha: 0, duration: 0.82 }, '-=0.58').from('.telemetry', { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, '-=0.38');
+    gsap.fromTo('.flight-path path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.method-stage', start: 'top 75%', end: 'bottom 65%', scrub: 0.65 } });
+    gsap.to('.whatsapp-float img', { y: -4, duration: 0.7, ease: 'sine.inOut', repeat: 1, yoyo: true, delay: 1.2 });
+  });
+  window.addEventListener('pagehide', () => context.revert(), { once: true });
+</script>

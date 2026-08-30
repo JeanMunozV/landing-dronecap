@@ -1,0 +1,142 @@
+[
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1711485616/111711485692590.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "hero",
+    "suggestedFilename": "dronecap-operador-vuelo-profesional.jpg",
+    "intendedUse": "hero principal o introduccion de innovacion"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1711564992/111711565060640.jpg",
+    "sourcePage": "https://www.dronecap.cl/nosotros/",
+    "category": "hero",
+    "suggestedFilename": "dronecap-dron-sobre-campo.jpg",
+    "intendedUse": "hero alternativo o bloque de tecnologia aplicada"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1712199863/111712200046280.jpg",
+    "sourcePage": "https://www.dronecap.cl/nosotros/",
+    "category": "hero",
+    "suggestedFilename": "dronecap-dron-en-vuelo.jpg",
+    "intendedUse": "imagen atmosferica de apertura o transicion"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1710985071/1710985524.jpg",
+    "sourcePage": "https://www.dronecap.cl/equipos/",
+    "category": "equipos",
+    "suggestedFilename": "dronecap-equipo-fpv.jpg",
+    "intendedUse": "tarjeta de tecnologia y control avanzado"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1710985071/1710985481.jpg",
+    "sourcePage": "https://www.dronecap.cl/equipos/",
+    "category": "equipos",
+    "suggestedFilename": "dronecap-mavic-enterprise-advanced.jpg",
+    "intendedUse": "seccion de equipos profesionales"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1710985071/1710985427.jpg",
+    "sourcePage": "https://www.dronecap.cl/equipos/",
+    "category": "equipos",
+    "suggestedFilename": "dronecap-agras-mg1s.jpg",
+    "intendedUse": "seccion de innovacion agricola"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1710985071/1710985187.jpg",
+    "sourcePage": "https://www.dronecap.cl/equipos/",
+    "category": "equipos",
+    "suggestedFilename": "dronecap-agras-t16.jpg",
+    "intendedUse": "tarjeta de tecnologia industrial"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1736015378/1773681926.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "operaciones",
+    "suggestedFilename": "dronecap-operacion-nocturna.jpg",
+    "intendedUse": "bloque de operaciones avanzadas"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1721670205/1721670354.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "operaciones",
+    "suggestedFilename": "dronecap-dron-pulverizador-en-terreno.jpg",
+    "intendedUse": "caso de uso agricola"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1711486197/1774213341.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "aerovigilancia",
+    "suggestedFilename": "dronecap-monitoreo-termico.jpg",
+    "intendedUse": "bloque de analitica y monitoreo"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1711483960/111711485564950.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "operaciones",
+    "suggestedFilename": "dronecap-fumigacion-aerea.jpg",
+    "intendedUse": "imagen panoramica de servicio agricola"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1731335929/1731336744.jpg",
+    "sourcePage": "https://www.dronecap.cl/servicios/servicio-de-aerofotogrametria-con-drones-en-chile-1731335929/",
+    "category": "fotogrametria",
+    "suggestedFilename": "dronecap-modelo-fotogrametrico-terreno.jpg",
+    "intendedUse": "muestra de procesamiento geoespacial"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1731335929/1731336737.jpg",
+    "sourcePage": "https://www.dronecap.cl/servicios/servicio-de-aerofotogrametria-con-drones-en-chile-1731335929/",
+    "category": "fotogrametria",
+    "suggestedFilename": "dronecap-mapa-aereo-multiespectral.jpg",
+    "intendedUse": "galeria de resultados tecnicos"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1731335929/1731336731.jpg",
+    "sourcePage": "https://www.dronecap.cl/servicios/servicio-de-aerofotogrametria-con-drones-en-chile-1731335929/",
+    "category": "fotogrametria",
+    "suggestedFilename": "dronecap-analisis-termico-geoespacial.jpg",
+    "intendedUse": "bloque de datos y analisis"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1731335929/1731336723.jpg",
+    "sourcePage": "https://www.dronecap.cl/servicios/servicio-de-aerofotogrametria-con-drones-en-chile-1731335929/",
+    "category": "fotogrametria",
+    "suggestedFilename": "dronecap-mapa-termico-procesado.jpg",
+    "intendedUse": "comparativa o detalle de procesamiento"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1712199863/111712200069210.jpg",
+    "sourcePage": "https://www.dronecap.cl/nosotros/",
+    "category": "capacitacion",
+    "suggestedFilename": "dronecap-analisis-en-terreno.jpg",
+    "intendedUse": "seccion de desarrollo de capacidades"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1712199863/111712200066430.jpg",
+    "sourcePage": "https://www.dronecap.cl/nosotros/",
+    "category": "capacitacion",
+    "suggestedFilename": "dronecap-controlador-y-piloto.jpg",
+    "intendedUse": "detalle de operacion y aprendizaje practico"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1712199863/111712200065440.jpg",
+    "sourcePage": "https://www.dronecap.cl/nosotros/",
+    "category": "capacitacion",
+    "suggestedFilename": "dronecap-capacitacion-tecnica.jpg",
+    "intendedUse": "bloque de formacion e innovacion"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1760789064/111760789500331.jpg",
+    "sourcePage": "https://www.dronecap.cl/",
+    "category": "proyectos",
+    "suggestedFilename": "dronecap-exhibicion-expodron.jpg",
+    "intendedUse": "caso destacado o ecosistema de innovacion"
+  },
+  {
+    "url": "https://www.dronecap.cl/xpdinam/db/imagenes/1758031308/1758031687.jpg",
+    "sourcePage": "https://www.dronecap.cl/noticias/drones-en-la-mineria-chilena-2025-oportunidades-laborales-y-como-obtener-la-licencia-de-drones-con-dronecap-1758031308/",
+    "category": "proyectos",
+    "suggestedFilename": "dronecap-dron-industrial-en-vuelo.jpg",
+    "intendedUse": "caso de uso industrial o mineria"
+  }
+]
