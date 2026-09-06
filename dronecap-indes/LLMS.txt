@@ -65,8 +65,8 @@ Una landing puede abrir con la idea «Soluciones aéreas que generan valor», se
 
 ## Datos de contacto públicos
 
-- Correo: `contacto@dronecap.cl`
-- Teléfono: `+56 9 4926 4903`
+- Correo: `johnmg@dronecap.cl`
+- Teléfono: `+56 9 9805 9026`
 - Horario: lunes a viernes, 09:00–21:00.
 - Dirección: **pendiente de validación**. El encabezado y la página de contacto publican «Colón 2945, Talcahuano, Región del Biobío», mientras el pie y la página «Por qué elegirnos» publican «Avenida Colón 2965, Talcahuano». No elegir ni mostrar una como definitiva hasta confirmarla.
 
